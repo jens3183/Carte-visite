@@ -1,0 +1,181 @@
+html,body{
+    margin: 0;
+    padding: 0;
+    font-family: Mulish, sans-serif;
+    background-image: url(photo/background.png);
+    display: flex;
+} 
+
+.cardBox{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    perspective: 1000px;
+    opacity: 0.9;
+}
+
+.card{
+    position: relative;
+    width: 525px;
+    height: 300px;
+    background: rgba(193, 138, 10, 1);
+    transform-style: preserve-3d;
+    transition: 5s ease;
+}
+
+.card-front, .card-back{
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    overflow: hidden;
+}
+
+
+.card-front{
+    display: flex;
+    font-size: 12px;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    overflow: hidden;
+}
+
+.avatar{
+    width: 90px;
+    height: 90px;
+    border-radius: 60%;
+    margin-left: 35%;
+}
+
+
+.card-front h2{
+    margin-left: 20%;
+}
+
+h2{
+    margin: 4px 0;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: #222;
+}
+
+.card-front {
+    transform: rotateY(180deg);
+}
+
+.card-back{
+    transform: rotateY(0deg);
+}
+
+.cardBox:hover .card{
+    transform: rotateY(180deg);
+}
+
+.card-back{
+    display: flex;
+    font-size: 12px;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    overflow: hidden;
+}
+
+.front-content, .back-content{
+    align-self: center;
+    justify-self: center;
+}
+
+.profil li{
+    list-style: none;
+    display: inline-flex;
+}
+
+
+.icon-box { 
+    border: 2px solid #000;
+    text-align: center;
+    cursor: pointer;
+    -webkit-transition: all ease 0.5s;
+    -moz-transition: all ease 0.5s;
+    transition: all ease 0.5s;
+    padding: 8px;
+    margin: 0 10px;
+    border-radius: 30%;
+    width: 20px;
+    height: 20px;
+    font-size: 20px;
+ }
+
+.icon-box:hover {
+    background-color: mistyrose;
+    color: #000;
+}
+
+.profil{
+    margin-right: 60px;
+
+}
+
+.card-front li img{
+    width: 18px;
+    height: 18px;
+}
+
+
+.info{
+    display: flex-start;
+    list-style: none;
+    margin-left: 10%;
+}
+
+p i{
+    margin: 6px;
+}
+
+a:link{
+    color: black;
+}
+
+ .info p{
+    margin: 0;
+    line-height: 12px;
+    font-weight: 600;
+    
+}
+
+h3 {
+    margin-left: 18%;
+}
+
+.back-content h3{
+    text-shadow: 5px 5px 5px #FF0000;
+}
+
+.card-back{
+    line-height: 26px;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+*{
+    letter-spacing: 1px;
+}
+
+.info i{
+    font-size: 20px;
+    color: #000;
+}
+
+ .card:hover .avatar{
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3);
+}
+
+
+
+
